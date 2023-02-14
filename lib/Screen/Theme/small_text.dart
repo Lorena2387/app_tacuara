@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class BigText extends StatelessWidget {
+class SmallText extends StatelessWidget {
   final Color? color;
   final String text;
   double size;
   TextOverflow overFlow;
-  BigText(
+  SmallText(
       {super.key,
-      this.color = Colors.white,
+      this.color,
       required this.text,
-      this.size = 22,
+      this.size = 18,
       this.overFlow = TextOverflow.ellipsis});
 
   @override
@@ -19,10 +19,7 @@ class BigText extends StatelessWidget {
     return Text(
       text,
       overflow: overFlow,
-      style: TextStyle(
-        fontFamily: 'Roboto',
-        color: color,
-      ),
+      style: TextStyle(fontFamily: 'Roboto', color: color),
     );
   }
 }
