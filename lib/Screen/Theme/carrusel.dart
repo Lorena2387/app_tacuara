@@ -20,8 +20,14 @@ class Carrusel extends StatelessWidget {
   Widget _buildPageItem(int index) {
     return Container(
       height: 220,
-      margin: EdgeInsets.only(left: 5, right: 5),
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
+      margin: const EdgeInsets.only(left: 5, right: 5),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          image: const DecorationImage(
+              fit: BoxFit.cover,
+              image: AssetImage(
+                'assets/images/cabana1.jpg',
+              ))),
     );
   }
 }

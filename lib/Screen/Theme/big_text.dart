@@ -23,6 +23,7 @@ class BigText extends StatelessWidget {
         fontFamily: 'Roboto',
         color: color,
       ),
+    
     );
   }
 }
