@@ -1,5 +1,6 @@
 import 'package:app_tacuara/Screen/Theme/app_theme.dart';
-import 'package:app_tacuara/Screen/Theme/small_text.dart';
+
+import 'package:app_tacuara/Screen/cabanas.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -40,7 +41,12 @@ class _InicioState extends State<Inicio> {
           Container(
               alignment: Alignment.bottomCenter,
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Alojamiento()));
+                },
                 elevation: 10,
                 minWidth: 300,
                 height: 30,
