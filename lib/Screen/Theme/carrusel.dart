@@ -1,3 +1,4 @@
+import 'package:app_tacuara/models/models.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -10,7 +11,7 @@ class Carrusel extends StatelessWidget {
     return Container(
       height: 320,
       child: PageView.builder(
-          itemCount: 4,
+          itemCount: 2,
           itemBuilder: (context, position) {
             return _buildPageItem(position);
           }),
@@ -23,11 +24,12 @@ class Carrusel extends StatelessWidget {
       margin: const EdgeInsets.only(left: 5, right: 5),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
-          image: const DecorationImage(
+          color: AppTheme.secundary,
+          image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage(
-                'assets/images/cabana1.jpg',
-              ))),
+              image: index.isEven
+                  ? const AssetImage('assets/images/cabana1.jpg')
+                  : const AssetImage('assets/images/cabana2.jpg'))),
     );
   }
 }
