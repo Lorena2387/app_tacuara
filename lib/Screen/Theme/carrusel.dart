@@ -1,7 +1,6 @@
 import 'dart:ffi';
 
 import 'package:app_tacuara/models/models.dart';
-import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -14,7 +13,7 @@ class Carrusel extends StatelessWidget {
     return Container(
       height: 320,
       child: PageView.builder(
-          itemCount: 2,
+          itemCount: 3,
           itemBuilder: (context, position) {
             return _buildPageItem(position);
           }),
@@ -22,17 +21,32 @@ class Carrusel extends StatelessWidget {
   }
 
   Widget _buildPageItem(int index) {
-    return Container(
-      height: 220,
-      margin: const EdgeInsets.only(left: 5, right: 5),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-          color: AppTheme.secundary,
-          image: DecorationImage(
-              fit: BoxFit.cover,
-              image: index.isEven
-                  ? const AssetImage('assets/images/cabana1.jpg')
-                  : const AssetImage('assets/images/cabana2.jpg'))),
+    return Scaffold(
+      appBar: AppBar(backgroundColor: AppTheme.primary, actions: []),
+      body: Column(
+        children: [
+          Container(
+            height: 220,
+            margin: const EdgeInsets.only(left: 5, right: 5),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                image: const DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage('assets/images/cabana1.jpg'))),
+          ),
+          const SizedBox(height: 30),
+          Title(
+              color: AppTheme.primary,
+              child: const Text(
+                'Tipos de cabañas',
+                style: TextStyle(
+                    color: AppTheme.primary,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Roboto',
+                    fontSize: 20),
+              ))
+        ],
+      ),
     );
   }
 }
