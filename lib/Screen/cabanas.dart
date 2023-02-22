@@ -40,6 +40,8 @@ class _AlojamientoState extends State<Alojamiento> {
                     );
                   },
                   scale: 0.9,
+                  pagination: const SwiperPagination(),
+                  control: const SwiperControl(color: AppTheme.primary),
                 ),
               )
             ],
