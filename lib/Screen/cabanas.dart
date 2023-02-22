@@ -1,8 +1,7 @@
-import 'package:app_tacuara/Screen/Theme/big_text.dart';
 import 'package:app_tacuara/models/models.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
 
 class Alojamiento extends StatefulWidget {
   const Alojamiento({super.key});
@@ -12,16 +11,39 @@ class Alojamiento extends StatefulWidget {
 }
 
 class _AlojamientoState extends State<Alojamiento> {
+  List<String> images = [
+    'assets/images/cabana1.jpg',
+    'assets/images/cabana2.jpg',
+    'assets/images/cabana3.jpg'
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: AppTheme.primary, actions: []),
-      body: SingleChildScrollView(
-          child: Column(
-        children: const [
-          Carrusel(),
-        ],
-      )),
-    );
+        appBar: AppBar(backgroundColor: AppTheme.primary, actions: []),
+        body: SafeArea(
+          child: SingleChildScrollView(
+              child: Column(
+            children: [
+              SizedBox(
+                width: double.infinity,
+                height: 250.0,
+                child: Swiper(
+                  itemCount: 3,
+                  viewportFraction: 0.8,
+                  itemBuilder: (BuildContext context, int index) {
+                    return ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image(
+                        image: AssetImage(images[index]),
+                        fit: BoxFit.cover,
+                      ),
+                    );
+                  },
+                  scale: 0.9,
+                ),
+              )
+            ],
+          )),
+        ));
   }
 }

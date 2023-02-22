@@ -30,8 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  dots_indicator: ^2.1.0
-  carousel_slider: ^4.2.1
+  flutter_swiper: ^1.1.6
   
   
   
