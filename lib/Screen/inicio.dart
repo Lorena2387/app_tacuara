@@ -28,7 +28,7 @@ class _InicioState extends State<Inicio> {
                 color: AppTheme.primary,
                 borderRadius: BorderRadius.all(Radius.circular(32.0))),
             child: const Text(
-              'Estamos ubicados en la vereda San Gerardo(Garzón-Huila), vía pavimentada a 5 minutos, detrás de la bahía comercial Tacuara Droguería Famamiga',
+              'Estamos ubicados en la vereda San Gerardo(Garzón-Huila), vía pavimentada a 5 minutos, detrás de la bahía comercial Tacuara Droguería Farmamiga',
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: AppTheme.secundary,

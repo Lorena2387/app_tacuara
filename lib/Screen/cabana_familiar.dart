@@ -13,6 +13,6 @@ class CabanaFamiliar extends StatefulWidget {
 class _CabanaFamiliarState extends State<CabanaFamiliar> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: SingleChildScrollView());
+    return const Scaffold();
   }
 }
