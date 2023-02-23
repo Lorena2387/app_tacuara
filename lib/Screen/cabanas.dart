@@ -43,7 +43,41 @@ class _AlojamientoState extends State<Alojamiento> {
                   pagination: const SwiperPagination(),
                   control: const SwiperControl(color: AppTheme.primary),
                 ),
-              )
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Title(
+                  color: AppTheme.primary,
+                  child: const Text(
+                    'Tipos de cabañas',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Roboto',
+                        fontSize: 20,
+                        color: AppTheme.primary),
+                  )),
+              const SizedBox(
+                height: 10,
+              ),
+              Title(
+                  color: AppTheme.primary,
+                  child: const Text(
+                    'Cabaña familiar',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Roboto',
+                        fontSize: 20,
+                        color: AppTheme.primary),
+                  )),
+              const SizedBox(
+                height: 10,
+              ),
+              const Image(
+                  image: AssetImage('assets/images/cabanaFamiliar1.png')),
+              const SizedBox(
+                height: 10,
+              ),
             ],
           )),
         ));
