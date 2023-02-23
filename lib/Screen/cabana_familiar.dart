@@ -1,3 +1,4 @@
+import 'package:app_tacuara/models/models.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -12,6 +13,6 @@ class CabanaFamiliar extends StatefulWidget {
 class _CabanaFamiliarState extends State<CabanaFamiliar> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(body: SingleChildScrollView());
   }
 }
