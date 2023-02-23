@@ -1,7 +1,7 @@
 import 'package:app_tacuara/models/models.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 
 class Alojamiento extends StatefulWidget {
   const Alojamiento({super.key});
