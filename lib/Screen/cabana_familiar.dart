@@ -11,22 +11,16 @@ class CabanaFamiliar extends StatefulWidget {
 }
 
 class _CabanaFamiliarState extends State<CabanaFamiliar> {
-  List<String> images = [
-    'assets/images/cabanafam1.png',
-    'assets/images/cabanafam2.png',
-    'assets/images/cabanafam3.png',
-    'assets/images/cabanafam4.png'
-  ];
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-        body: CustomScrollView(
-      slivers: [
-        SliverAppBar(
-          backgroundColor: AppTheme.primary,
-          actions: [],
-        ),
-      ],
-    ));
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            backgroundColor: AppTheme.primary,
+          ),
+        ],
+      ),
+    );
   }
 }
