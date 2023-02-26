@@ -19,6 +19,14 @@ class _CabanaFamiliarState extends State<CabanaFamiliar> {
           SliverAppBar(
             backgroundColor: AppTheme.primary,
           ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24.0),
+              child: SizedBox(
+                height: 10,
+              ),
+            ),
+          )
         ],
       ),
     );
